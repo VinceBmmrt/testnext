@@ -14,10 +14,27 @@ const Table = () => {
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-4 font-medium text-gray-900">
-                  Name
+                  <input type="checkbox"></input> Name
                 </th>
-                <th scope="col" className="px-6 py-4 font-medium text-gray-900">
-                  State
+                <th className="flex gap-1 items-center px-6 py-4 font-medium text-gray-900">
+                  <span className="flex items-center">
+                    State
+                    <svg
+                      className="w-3 h-3 ml-1 text-gray-800 dark:text-white"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 14"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M5 13V1m0 0L1 5m4-4 4 4"
+                      />
+                    </svg>
+                  </span>
                 </th>
                 <th scope="col" className="px-6 py-4 font-medium text-gray-900">
                   Role
@@ -40,10 +57,7 @@ const Table = () => {
                   <th className="flex gap-3 px-6 py-4 font-normal text-gray-900">
                     <div className="text-sm">
                       <div className="font-medium text-gray-700">
-                        {item.name}
-                      </div>
-                      <div className="text-gray-400">
-                        <input type="checkbox"></input>
+                        <input type="checkbox"></input> {item.name}
                       </div>
                     </div>
                   </th>
