@@ -1,3 +1,4 @@
+import MissionDateButton from "../_components/MissionDateButton/MissionDateButton";
 import MissionsSearchBar from "../_components/MissionsSearchBar/MissionsSearchBar";
 import MissionsSideBar from "../_components/MissionsSideBar/MissionsSideBar";
 import MissionsTable from "../_components/MissionsTable/MissionsTable";
@@ -11,6 +12,7 @@ const missionsPage = () => {
       <MissionsTable />
       <MissionsTabs />
       <MissionsSearchBar />
+      <MissionDateButton />
     </div>
   );
 };
