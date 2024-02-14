@@ -31,11 +31,11 @@ const MissionsTabs = () => {
             <li className="me-2" role="presentation">
               <button
                 className={`inline-block p-4 border-b-2 rounded-t-lg ${
-                  activeTab === "dashboard"
+                  activeTab === "inProgressMissions"
                     ? "border-custom-color text-custom-color"
                     : "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 text-gray-500"
                 }`}
-                onClick={() => handleTabClick("dashboard")}
+                onClick={() => handleTabClick("inProgressMissions")}
               >
                 En cours
               </button>
@@ -43,11 +43,11 @@ const MissionsTabs = () => {
             <li className="me-2" role="presentation">
               <button
                 className={`inline-block p-4 border-b-2 rounded-t-lg ${
-                  activeTab === "settings"
+                  activeTab === "futuresMissions"
                     ? "border-custom-color text-custom-color"
                     : "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 text-gray-500"
                 }`}
-                onClick={() => handleTabClick("settings")}
+                onClick={() => handleTabClick("futuresMissions")}
               >
                 À venir
               </button>
@@ -67,11 +67,11 @@ const MissionsTabs = () => {
             <li role="presentation">
               <button
                 className={`inline-block p-4 border-b-2 rounded-t-lg ${
-                  activeTab === "contacts"
+                  activeTab === "cancelledMissions"
                     ? "border-custom-color text-custom-color"
                     : "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 text-gray-500"
                 }`}
-                onClick={() => handleTabClick("contacts")}
+                onClick={() => handleTabClick("cancelledMissions")}
               >
                 Annulé
               </button>
@@ -96,13 +96,13 @@ const MissionsTabs = () => {
           </div>
           <div
             className={`p-4 rounded-lg bg-gray-50 dark:bg-gray-800 ${
-              activeTab === "dashboard" ? "block" : "hidden"
+              activeTab === "inProgressMissions" ? "block" : "hidden"
             }`}
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
               This is some placeholder content for the{" "}
               <strong className="font-medium text-gray-800 dark:text-white">
-                Dashboard tab's associated content
+                in Progress Missions tab's associated content
               </strong>
               . Clicking another tab will toggle the visibility of this one for
               the next. The tab JavaScript swaps classes to control the content
@@ -111,13 +111,13 @@ const MissionsTabs = () => {
           </div>
           <div
             className={`p-4 rounded-lg bg-gray-50 dark:bg-gray-800 ${
-              activeTab === "settings" ? "block" : "hidden"
+              activeTab === "futuresMissions" ? "block" : "hidden"
             }`}
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
               This is some placeholder content for the{" "}
               <strong className="font-medium text-gray-800 dark:text-white">
-                Settings tab's associated content
+                futures Missions tab's associated content
               </strong>
               . Clicking another tab will toggle the visibility of this one for
               the next. The tab JavaScript swaps classes to control the content
@@ -132,7 +132,7 @@ const MissionsTabs = () => {
             <p className="text-sm text-gray-500 dark:text-gray-400">
               This is some placeholder content for the{" "}
               <strong className="font-medium text-gray-800 dark:text-white">
-                finishedMissions tab's associated content
+                finished Missions tab's associated content
               </strong>
               . Clicking another tab will toggle the visibility of this one for
               the next. The tab JavaScript swaps classes to control the content
@@ -141,13 +141,13 @@ const MissionsTabs = () => {
           </div>
           <div
             className={`p-4 rounded-lg bg-gray-50 dark:bg-gray-800 ${
-              activeTab === "contacts" ? "block" : "hidden"
+              activeTab === "cancelledMissions" ? "block" : "hidden"
             }`}
           >
             <p className="text-sm text-gray-500 dark:text-gray-400">
               This is some placeholder content for the{" "}
               <strong className="font-medium text-gray-800 dark:text-white">
-                Contacts tab's associated content
+                cancelled Missions tab's associated content
               </strong>
               . Clicking another tab will toggle the visibility of this one for
               the next. The tab JavaScript swaps classes to control the content

@@ -92,9 +92,6 @@ const Table = () => {
                       </div>
                     )}
                   </td>
-                  <td className="px-6 py-4">
-                    {/* Ajoutez ici le contenu de la dernière colonne si nécessaire */}
-                  </td>
                 </tr>
               ))}
             </tbody>

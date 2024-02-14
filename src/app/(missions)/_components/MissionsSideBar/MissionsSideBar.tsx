@@ -1,4 +1,12 @@
+"use client";
+import { useState } from "react";
+
 const MissionsSideBar = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+  };
   return (
     <div>
       <button
@@ -48,8 +56,13 @@ const MissionsSideBar = () => {
               <span>
                 <button
                   type="button"
-                  style={{ backgroundColor: "#798c73" }}
-                  className="text-white bg-green-800 hover:bg-green-900 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-900"
+                  style={{
+                    backgroundColor: "#798c73",
+                  }}
+                  onClick={handleClick}
+                  className={`text-white bg-green-800 hover:bg-green-900 ${
+                    isClicked ? "bg-green-700" : ""
+                  } active:opacity-80 focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-0 font-medium rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-900 transition-all duration-200`}
                 >
                   + Nouvelle Mission
                 </button>
