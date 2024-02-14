@@ -8,9 +8,6 @@ const config: Config = {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
-    colors: {
-  
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -19,6 +16,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require("flowbite/plugin")],
 };
 export default config;
