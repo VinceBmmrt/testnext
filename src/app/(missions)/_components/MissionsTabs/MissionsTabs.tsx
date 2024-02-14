@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const MissionsTabs = () => {
   const [activeTab, setActiveTab] = useState("toProvideMissions");
 
-  const handleTabClick = (tabId) => {
+  const handleTabClick = (tabId: string) => {
     setActiveTab(tabId);
   };
 
