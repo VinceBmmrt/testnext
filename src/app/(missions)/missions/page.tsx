@@ -6,7 +6,6 @@ import MissionsTabs from "../_components/MissionsTabs/MissionsTabs";
 const missionsPage = () => {
   return (
     <div className="bg-white flex flex-col items-center">
-      <h1>Tableau avec Checkbox</h1>
       <MissionsSideBar />
 
       <MissionsTable />
