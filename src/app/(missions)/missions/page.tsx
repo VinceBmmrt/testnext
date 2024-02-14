@@ -8,11 +8,14 @@ const missionsPage = () => {
   return (
     <div className="bg-white flex flex-col items-center">
       <MissionsSideBar />
-
       <MissionsTable />
       <MissionsTabs />
-      <MissionsSearchBar />
-      <MissionDateButton />
+
+      {/* Wrap SearchBar and DateButton in a div */}
+      <div className="flex justify-center w-full">
+        <MissionsSearchBar />
+        <MissionDateButton />
+      </div>
     </div>
   );
 };
