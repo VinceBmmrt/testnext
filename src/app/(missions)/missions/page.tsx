@@ -5,6 +5,7 @@ import MissionsSearchBar from "../_components/MissionsSearchBar/MissionsSearchBa
 import MissionsSideBar from "../_components/MissionsSideBar/MissionsSideBar";
 import MissionsTable from "../_components/MissionsTable/MissionsTable";
 import MissionsTabs from "../_components/MissionsTabs/MissionsTabs";
+import CheckmarkListButton from "../_components/CheckmarkListButton/CheckmarkListButton";
 
 const missionsPage = () => {
   return (
@@ -15,6 +16,7 @@ const missionsPage = () => {
       <div className="flex justify-center w-full">
         <MissionsSearchBar />
         <MissionDateButton />
+        <CheckmarkListButton />
       </div>
       <div className="flex flex-col w-full block xl2:hidden">
         {data.map((mission, index) => (
