@@ -81,7 +81,10 @@ const Table = () => {
                     {item.candidats && item.candidats.length > 0 && (
                       <div className="flex gap-2">
                         {item.candidats.map((candidat, index) => (
-                          <div key={index} className="relative h-8 w-8">
+                          <div
+                            key={index}
+                            className="relative h-8 w-8 -m-[10px]"
+                          >
                             <img
                               className="h-full w-full rounded-full object-cover object-center"
                               src={candidat}

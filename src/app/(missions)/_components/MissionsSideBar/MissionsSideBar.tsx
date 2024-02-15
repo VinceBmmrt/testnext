@@ -1,6 +1,26 @@
 "use client";
+import { useParams, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import CrossCloseSvg from "../../../../../public/menu-cross-icon.svg";
+
+const SideBarRow = ({ label, href }: { label: string; href: string }) => {
+  const pathname = usePathname();
+
+  const pathnameFormated = pathname.split("/")[1].toLowerCase();
+  const isSelected = pathnameFormated === label.toLowerCase();
+  return (
+    <li>
+      <a
+        href={href}
+        className={`flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-green-100 dark:hover:bg-green-700 group ${
+          isSelected ? "bg-green-300" : ""
+        }`}
+      >
+        <span className="flex-1 ms-3 whitespace-nowrap">{label}</span>
+      </a>
+    </li>
+  );
+};
 
 const MissionsSideBar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,9 +36,7 @@ const MissionsSideBar = () => {
           data-drawer-toggle="default-sidebar"
           aria-controls="default-sidebar"
           type="button"
-          className={`inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg xl2:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${
-            isSidebarOpen ? "absolute top-0 right-0" : "absolute top-0 right-0"
-          }`}
+          className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg absolute top-0 right-0 xl2:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 "
           onClick={handleClick}
         >
           <span className="sr-only">Open sidebar</span>
@@ -58,7 +76,7 @@ const MissionsSideBar = () => {
                 >
                   <span className="font-medium text-white dark:text">C</span>
                 </div>
-                <span className="ms-3 py-14">Ciel Bleu</span>
+                <span className="ms-3 py-4">Ciel Bleu</span>
               </a>
               <span className="ms-3 py-14">
                 {/* Close icon */}
@@ -112,68 +130,13 @@ const MissionsSideBar = () => {
                 </button>
               </span>
             </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">
-                  Tableau de bord
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">Planning</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">Missions</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">Factures</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group mt-40"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">
-                  Paramètres
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">Contact</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
-                <span className="flex-1 ms-3 whitespace-nowrap">
-                  Déconnexion
-                </span>
-              </a>
-            </li>
+            <SideBarRow label="Tableau de bord" href="#" />
+            <SideBarRow label="Planning" href="#" />
+            <SideBarRow label="Missions" href="/missions" />
+            <SideBarRow label="Factures" href="#" />
+            <SideBarRow label="Paramètres" href="#" />
+            <SideBarRow label="Contact" href="#" />
+            <SideBarRow label="Déconnexion" href="#" />
           </ul>
         </div>
       </aside>

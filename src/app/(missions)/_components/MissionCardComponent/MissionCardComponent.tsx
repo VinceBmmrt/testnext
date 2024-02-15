@@ -1,7 +1,7 @@
 // MissionCardComponent.js
 import React from "react";
 
-const MissionCardComponent = ({ mission }) => {
+const MissionCardComponent = ({ mission }: { mission: any }) => {
   return (
     <div className="max-w-2xl mx-auto bg-white rounded border border-gray-300 overflow-hidden shadow-md p-4 my-4 h-full w-full">
       {/* Top Left: Métier and Date */}
