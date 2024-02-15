@@ -1,10 +1,8 @@
 "use client";
 import { useState } from "react";
 import CrossCloseSvg from "../../../../../public/menu-cross-icon.svg";
-import { SvgIcon } from "@mui/material";
 
 const MissionsSideBar = () => {
-  const [isClicked, setIsClicked] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleClick = () => {
@@ -106,7 +104,6 @@ const MissionsSideBar = () => {
                   style={{
                     backgroundColor: "#798c73",
                   }}
-                  onClick={handleClick}
                   className={`text-white bg-green-800 hover:bg-green-900 ${
                     isSidebarOpen ? "bg-green-700" : ""
                   } active:opacity-80 focus:outline-none focus:ring-4 focus:ring-green-300 focus:ring-opacity-0 font-medium rounded-sm text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-700 dark:hover:bg-green-800 dark:focus:ring-green-900 transition-all duration-200`}
