@@ -16,7 +16,7 @@ const missionsPage = () => {
         <MissionsSearchBar />
         <MissionDateButton />
       </div>
-      <div className="flex flex-col w-full ">
+      <div className="flex flex-col w-full block sm:hidden">
         {data.map((mission, index) => (
           <MissionCardComponent key={index} mission={mission} />
         ))}
