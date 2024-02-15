@@ -40,25 +40,31 @@ const MissionCardComponent = ({ mission }) => {
         </div>
       </div>
 
-      {/* Bottom Mid: Avatar Images and "Voir les 5 candidatures" */}
+      {/* Bottom Mid: Avatar Images */}
       <div className="flex items-center justify-center mt-4">
-        {mission.candidats.map(
-          (candidat: { avatarUrl: string | undefined }, index: number) => (
-            <div key={index} className="flex items-center h-8 w-8">
-              <img
-                className="h-full w-full rounded-full object-cover object-center"
-                src={candidat as any}
-                alt={`Avatar ${index + 1}`}
-              />
-            </div>
-          )
-        )}
+        {mission.candidats.length
+          ? mission.candidats.map(
+              (candidat: { avatarUrl: string | undefined }, index: number) => (
+                <div key={index} className="flex items-center h-8 w-8">
+                  <img
+                    className="h-full w-full rounded-full object-cover object-center"
+                    src={candidat as any}
+                    alt={`Avatar ${index + 1}`}
+                  />
+                </div>
+              )
+            )
+          : null}
       </div>
-
-      {/* Bottom Left: "Voir les 5 candidatures" */}
-      <p className="text-center text-blue-500 mt-4">
-        Voir les {mission.candidats.length} candidatures
-      </p>
+      {mission.candidats.length ? (
+        <p className="text-center text-blue-500 mt-4">
+          Voir les {mission.candidats.length} candidatures
+        </p>
+      ) : (
+        <p className="text-center font-medium text-black-500 mt-4 ">
+          Aucun candidat n'a postulé pour le moment
+        </p>
+      )}
     </div>
   );
 };

@@ -12,15 +12,14 @@ const missionsPage = () => {
       <MissionsSideBar />
       <MissionsTable />
       <MissionsTabs />
-      <div className="flex flex-col w-full">
-        {data.map((mission, index) => (
-          <MissionCardComponent key={index} mission={mission} />
-        ))}
-      </div>
-      {/* Wrap SearchBar and DateButton in a div */}
       <div className="flex justify-center w-full">
         <MissionsSearchBar />
         <MissionDateButton />
+      </div>
+      <div className="flex flex-col w-full ">
+        {data.map((mission, index) => (
+          <MissionCardComponent key={index} mission={mission} />
+        ))}
       </div>
     </div>
   );
