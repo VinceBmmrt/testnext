@@ -5,7 +5,7 @@ import MissionsTabs from "../MissionsTabs/MissionsTabs";
 const Table = () => {
   return (
     <>
-      <div>
+      <div className="relative mx-60">
         <h1 className="mb-5">
           Missions <sup>{data.length}</sup>
         </h1>
