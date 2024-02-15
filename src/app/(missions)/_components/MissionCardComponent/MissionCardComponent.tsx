@@ -5,14 +5,14 @@ const MissionCardComponent = ({ mission }) => {
   return (
     <div className="max-w-2xl mx-auto bg-white rounded border border-gray-300 overflow-hidden shadow-md p-4 my-4 h-full w-full">
       {/* Top Left: Métier and Date */}
-      <div className="mb-4">
-        <p className="font-bold text-gray-700">Métier</p>
-        <p className="text-gray-500">Date</p>
-      </div>
-
-      {/* Top Right: Amount and Hours */}
-      <div className="flex justify-between items-start">
+      <div className="mb-4 flex justify-between items-start">
         <div>
+          <p className="font-bold text-gray-700">Métier</p>
+          <p className="text-gray-500">Date</p>
+        </div>
+
+        {/* Top Right: Amount and Hours */}
+        <div className="text-right">
           <p className="text-gray-700">00.00 €</p>
           <p className="text-gray-500">Horaires</p>
         </div>
@@ -33,6 +33,7 @@ const MissionCardComponent = ({ mission }) => {
         )}
       </div>
 
+      {/* Bottom Left: "Voir les 5 candidatures" */}
       <p className="text-center text-blue-500 mt-4">
         Voir les {mission.candidats.length} candidatures
       </p>
