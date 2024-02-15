@@ -20,15 +20,17 @@ const MissionCardComponent = ({ mission }) => {
 
       {/* Bottom Mid: Avatar Images and "Voir les 5 candidatures" */}
       <div className="flex items-center justify-center mt-4">
-        {mission.candidats.map((candidat, index) => (
-          <div key={index} className="flex items-center">
-            <img
-              className="rounded-full h-16 w-16 mr-2" // Adjusted size for avatar images
-              src={candidat.avatarUrl}
-              alt={`Avatar ${index + 1}`}
-            />
-          </div>
-        ))}
+        {mission.candidats.map(
+          (candidat: { avatarUrl: string | undefined }, index: number) => (
+            <div key={index} className="flex items-center h-8 w-8">
+              <img
+                className="h-full w-full rounded-full object-cover object-center"
+                src={candidat as any}
+                alt={`Avatar ${index + 1}`}
+              />
+            </div>
+          )
+        )}
       </div>
 
       <p className="text-center text-blue-500 mt-4">
