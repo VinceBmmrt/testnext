@@ -8,12 +8,34 @@ const MissionCardComponent = ({ mission }) => {
       <div className="mb-4 flex justify-between items-start">
         <div>
           <p className="font-bold text-gray-700">Métier</p>
-          <p className="text-gray-500">Date</p>
+          <p className="text-gray-500">
+            <svg
+              className="w-4 h-4 text-gray-300" // Adjusted size and color
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M5 1v3m5-3v3m5-3v3M1 7h18M5 11h10M2 3h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"
+              />
+            </svg>
+            Date
+            {mission.hasTag && (
+              <span className="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-red-400 border border-red-400">
+                Badge
+              </span>
+            )}
+          </p>
         </div>
 
         {/* Top Right: Amount and Hours */}
         <div className="text-right">
-          <p className="text-gray-700">00.00 €</p>
+          <p className="font-bold text-gray-700">00.00 €</p>
           <p className="text-gray-500">Horaires</p>
         </div>
       </div>
