@@ -10,7 +10,7 @@ const Table = () => {
           Missions <sup>{data.length}</sup>
         </h1>
         <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
-          <table className="w-full border-collapse bg-white text-left text-sm text-gray-500 hidden sm:table">
+          <table className="w-full border-collapse bg-white text-left text-sm text-gray-500 hidden xl2:table">
             <thead className="bg-gray-50">
               <tr>
                 <th scope="col" className="px-6 py-4 font-medium text-gray-900">

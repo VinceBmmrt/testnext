@@ -18,7 +18,7 @@ const MissionsSideBar = () => {
           data-drawer-toggle="default-sidebar"
           aria-controls="default-sidebar"
           type="button"
-          className={`inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${
+          className={`inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg xl2:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${
             isSidebarOpen ? "absolute top-0 right-0" : "absolute top-0 right-0"
           }`}
           onClick={handleClick}
@@ -44,7 +44,7 @@ const MissionsSideBar = () => {
         id="default-sidebar"
         className={`fixed top-0 left-0 z-40 w-64 h-screen transition-transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } sm:translate-x-0 border-r border-gray-300 dark:border-gray-600`}
+        } xl2:translate-x-0 border-r border-gray-300 dark:border-gray-600`}
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
@@ -64,7 +64,7 @@ const MissionsSideBar = () => {
               </a>
               <span className="ms-3 py-14">
                 {/* Close icon */}
-                <div className="flex items-center justify-between p-2 sm:hidden">
+                <div className="flex items-center justify-between p-2 xl2:hidden">
                   <div>
                     <span className="text-gray-900 font-bold">MENU</span>
                   </div>
